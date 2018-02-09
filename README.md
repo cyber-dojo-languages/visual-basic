@@ -1,3 +1,5 @@
-# visualbasic 0.0.0.5943
+# Visual Basic
 
-![Build Status](https://travis-ci.org/cyber-dojo-languages/visualbasic-0.0.0.5943.svg?branch=master)
+![Build Status](https://travis-ci.org/cyber-dojo-languages/visualbasic.svg?branch=master)
+
+Version=0.0.0.5943

@@ -6,5 +6,3 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
  && apt-get install --yes mono-devel \
  && apt-get install --yes mono-vbnc
-
-RUN vbnc -help | grep -q 0.0.0.5943
