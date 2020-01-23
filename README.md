@@ -1,6 +1,6 @@
-# Visual Basic
+[![CircleCI](https://circleci.com/gh/cyber-dojo-languages/visual-basic.svg?style=svg)](https://circleci.com/gh/cyber-dojo-languages/visual-basic)
 
-![Build Status](https://travis-ci.org/cyber-dojo-languages/visual-basic.svg?branch=master)
+# Visual Basic
 
 [Version=0.0.0.5943](https://github.com/cyber-dojo-languages/visual-basic/blob/master/check_version.sh)
 
