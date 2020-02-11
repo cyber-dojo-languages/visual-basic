@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build image, test it, push it dockerhub, notify dependents
+          name: Build image, test it, push to dockerhub, notify dependents
           command: ./pipe_build_up_test.sh
 
 workflows:
@@ -14,7 +14,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "0 0 1,5,10,15,20,25 * *"
           filters:
             branches:
               only: [ master ]
