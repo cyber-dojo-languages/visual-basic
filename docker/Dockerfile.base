@@ -1,6 +1,2 @@
-FROM cyberdojofoundation/ubuntu-build-essential-18-04:a6578e6
+FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine3.22
 LABEL maintainer=jon@jaggersoft.com
-
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get install --yes mono-devel mono-vbnc

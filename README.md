@@ -1,5 +1,5 @@
-[![CircleCI](https://circleci.com/gh/cyber-dojo-languages/visual-basic.svg?style=svg)](https://circleci.com/gh/cyber-dojo-languages/visual-basic)
+[![Main](https://github.com/cyber-dojo-languages/visual-basic/actions/workflows/main.yml/badge.svg)](https://github.com/cyber-dojo-languages/visual-basic/actions/workflows/main.yml)
 
-## image_name="cyberdojofoundation/visual-basic"
+## image_name="ghcr.io/cyber-dojo-languages/visual-basic"
 
 ![cyber-dojo.org home page](https://github.com/cyber-dojo/cyber-dojo/blob/master/shared/home_page_snapshot.png)
