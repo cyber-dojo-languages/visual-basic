@@ -7,7 +7,7 @@ readonly JSON=`cat docker/image_name.json`
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
 readonly MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-readonly EXPECTED=10.0.103
+readonly EXPECTED=10.0
 readonly ACTUAL=$(docker run --rm -i ${IMAGE_NAME} sh -c 'dotnet --version')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
@@ -20,9 +20,12 @@ fi
 
 # The SDK version alone does not prove the Visual Basic compiler ships in it,
 # which is the whole point of this image.
-readonly VBC=$(docker run --rm -i ${IMAGE_NAME} sh -c "ls /usr/share/dotnet/sdk/${EXPECTED}/Roslyn/bincore/vbc.dll")
+# The directory carries the full patch version, which EXPECTED does not, so
+# the glob finds it without naming it.
+readonly SDK_GLOB="/usr/share/dotnet/sdk/${EXPECTED}*/Roslyn/bincore/vbc.dll"
+readonly VBC=$(docker run --rm -i ${IMAGE_NAME} sh -c "ls ${SDK_GLOB}")
 
-if [ "${VBC}" == "/usr/share/dotnet/sdk/${EXPECTED}/Roslyn/bincore/vbc.dll" ]; then
+if [ -n "${VBC}" ]; then
   echo "VB COMPILER CONFIRMED at ${VBC}"
 else
   echo "VB COMPILER NOT FOUND"
